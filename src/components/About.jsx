@@ -1,6 +1,6 @@
 const stats = [
-  { value: '50+', label: 'Projects' },
-  { value: '2k+', label: 'Commits' },
+  { value: '5+', label: 'Projects' },
+  { value: 'CSE', label: 'Degree' },
   { value: '100%', label: 'Reliable' },
 ]
 
@@ -10,19 +10,24 @@ export default function About() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
 
-          {/* Text */}
           <div className="animate-fade-up">
             <h2 className="text-4xl lg:text-5xl font-black mb-10 text-light-bg">
               Passionate about <br />
-              <span className="text-white bg-accent mt-4 px-3 rounded-lg">problem solving</span>
+              <span className="text-white bg-accent px-3 rounded-lg">problem solving</span>
             </h2>
             <p className="text-lg leading-relaxed text-text-dim font-medium mb-8">
-              I am a self-driven developer with an insatiable curiosity for how things work.
-              My journey is defined by a relentless pursuit of solving real-world problems through technology.
+              I'm a Computer Science & Engineering student at the <span className="text-light-bg font-bold">University of Chittagong</span>, 
+              driven by curiosity and a love for building things that actually work. My approach spans 
+              full-stack development, database engineering, embedded systems, and UI/UX design.
+            </p>
+            <p className="text-lg leading-relaxed text-text-dim font-medium mb-8">
+              I built a <span className="text-light-bg font-bold">Flask-based ETL web app</span> that automates database workflows - 
+              handling CSV, Excel, JSON, XML, cleaning data, detecting functional dependencies, computing 
+              candidate keys, and normalizing to 3NF with a drag-and-drop React interface.
             </p>
             <p className="text-lg leading-relaxed text-text-dim font-medium mb-12">
-              Currently focusing on deep integration of AI-driven logic within web apps and
-              optimizing frontend performance for global audiences.
+              Photography shapes my UI/UX philosophy - every interface should guide users through 
+              visual hierarchy, clarity, and intentional spacing, so they feel guided, not overwhelmed.
             </p>
 
             <div className="grid grid-cols-3 gap-6">
@@ -37,7 +42,7 @@ export default function About() {
 
           {/* Blob decoration */}
           <div className="relative hidden lg:flex justify-center items-center">
-            <div className="absolute w-[400px] h-[400px] bg-accent/20 blur-[80px] rounded-full"></div>
+            <div className="absolute w-96 h-96 bg-accent/20 blur-[80px] rounded-full"></div>
             <svg className="relative z-10 w-96 h-96 text-accent opacity-40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill="currentColor"
