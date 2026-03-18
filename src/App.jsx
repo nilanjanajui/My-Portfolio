@@ -5,7 +5,7 @@ import ProjectsGrid from './components/ProjectsGrid'
 import Skills from './components/Skills'
 import HowIBuild from './components/HowIBuild'
 import About from './components/About'
-// import Contact from './components/Contact'
+import Contact from './components/Contact'
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
         <Skills></Skills>
         <HowIBuild></HowIBuild>
         <About></About>
-        {/* <Contact /> */}
+        <Contact></Contact>
       </main>
     </div>
   )
