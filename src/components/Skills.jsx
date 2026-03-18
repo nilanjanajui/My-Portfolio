@@ -35,19 +35,19 @@ const skills = [
     icon: 'palette',
     title: 'UI/UX & Design',
     tags: [
-      { name: 'Figma',     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-      { name: 'Canva',     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg' },
-      { name: 'Photoshop', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg' },
-      { name: 'Illustrator',logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-original.svg' },
+      { name: 'Figma',       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+      { name: 'Canva',       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg' },
+      { name: 'Photoshop',   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg' },
+      { name: 'Illustrator', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-original.svg' },
     ],
   },
   {
     icon: 'memory',
     title: 'Embedded & Systems',
     tags: [
-      { name: 'Arduino',   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
-      { name: 'C++',       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
-      { name: 'Linux',     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
+      { name: 'Arduino', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
+      { name: 'C++',     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
+      { name: 'Linux',   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
     ],
   },
   {
@@ -66,38 +66,38 @@ const darkLogos = ['GitHub', 'Express', 'Flask', 'Bash', 'Next.js']
 
 export default function Skills() {
   return (
-    <section className="py-32 px-6 bg-primary" id="skills">
+    <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-primary" id="skills">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="flex flex-col items-center mb-24 text-center">
-          <h2 className="text-4xl font-black tracking-tight mb-4 text-light-bg">Technical Toolkit</h2>
-          <div className="h-1.5 w-24 bg-accent rounded-full mb-8"></div>
-          <p className="text-text-dim max-w-2xl text-lg">
+        <div className="flex flex-col items-center mb-12 sm:mb-16 lg:mb-24 text-center">
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-light-bg">Technical Toolkit</h2>
+          <div className="h-1.5 w-24 bg-accent rounded-full mb-6 sm:mb-8"></div>
+          <p className="text-text-dim max-w-2xl text-base sm:text-lg px-2">
             A full-spectrum skill set — from pixel-perfect interfaces to normalized databases and embedded systems.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {skills.map((skill) => (
             <div
               key={skill.title}
-              className="bg-secondary p-10 rounded-xl border border-white/5 shadow-sm hover:shadow-xl transition-all group"
+              className="bg-secondary p-6 sm:p-8 lg:p-10 rounded-xl border border-white/5 shadow-sm hover:shadow-xl transition-all group"
             >
-              {/* ✅ Original icon + title header — kept exactly as before */}
-              <div className="flex items-center gap-4 mb-10">
-                <div className="rounded-2xl bg-primary text-accent flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-black/20 w-20 h-20">
-                  <span className="material-symbols-outlined text-5xl">{skill.icon}</span>
+              {/* Icon + Title — centered on mobile, left on sm+ */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 lg:gap-4 mb-6 sm:mb-8 lg:mb-10 text-center sm:text-left">
+                <div className="rounded-2xl bg-primary text-accent flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-black/20 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 shrink-0">
+                  <span className="material-symbols-outlined text-3xl sm:text-4xl lg:text-5xl">{skill.icon}</span>
                 </div>
-                <h3 className="text-2xl font-black text-light-bg tracking-tight">{skill.title}</h3>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-light-bg tracking-tight">{skill.title}</h3>
               </div>
 
-              {/* ✅ Tech logos with names below */}
-              <div className="flex flex-wrap gap-4">
+              {/* Tech Logos — centered on mobile, left on sm+ */}
+              <div className="flex flex-wrap justify-center sm:justify-start gap-3 lg:gap-4">
                 {skill.tags.map((tag) => (
-                  <div key={tag.name} className="flex flex-col items-center gap-2 group/tag">
-                    <div className="w-12 h-12 bg-primary/60 rounded-xl border border-white/5 flex items-center justify-center p-2.5 hover:border-accent/40 hover:bg-primary transition-all hover:scale-110 duration-200">
+                  <div key={tag.name} className="flex flex-col items-center gap-1.5 sm:gap-2 group/tag">
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 bg-primary/60 rounded-xl border border-white/5 flex items-center justify-center p-2 lg:p-2.5 hover:border-accent/40 hover:bg-primary transition-all hover:scale-110 duration-200">
                       <img
                         src={tag.logo}
                         alt={tag.name}
@@ -109,7 +109,7 @@ export default function Skills() {
                         }
                       />
                     </div>
-                    <span className="text-[10px] font-bold text-text-dim uppercase tracking-wider group-hover/tag:text-accent transition-colors">
+                    <span className="text-[9px] sm:text-[10px] font-bold text-text-dim uppercase tracking-wider group-hover/tag:text-accent transition-colors">
                       {tag.name}
                     </span>
                   </div>
